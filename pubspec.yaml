@@ -15,17 +15,18 @@ dependencies:
   flutter_hooks: ^0.20.5
   flutter_localizations:
     sdk: flutter
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.10+1
   graphite: ^1.1.2
   intl: any
   rive: ^0.13.5
+  vector_graphics: 1.1.11+1
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.3
   flutter_gen_runner: ^5.1.0+1
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
+  vector_graphics_compiler: 1.1.11+1
   very_good_analysis: ^5.1.0
 
 flutter:
@@ -36,6 +37,14 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/rive/
+    - path: assets/svg/youtrust_full_logo.svg
+      transformers:
+        - package: vector_graphics_compiler
+    - path: assets/svg/hessen.svg
+      transformers:
+        - package: vector_graphics_compiler
+    - path: assets/svg/hessen_2.svg
+
 
   fonts:
     - family: Graphik

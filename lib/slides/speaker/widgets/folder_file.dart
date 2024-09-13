@@ -1,6 +1,5 @@
 import 'package:assets_transformation_presentation/core/extensions/context_ext.dart';
 import 'package:assets_transformation_presentation/core/widgets/margins.dart';
-import 'package:assets_transformation_presentation/generated/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -54,7 +53,8 @@ class FolderFile extends HookWidget {
               verticalMargin16,
               Visibility(
                 visible: animationIndex == 5,
-                child: Assets.images.youtrust.image(
+                child: Image.asset(
+                  'assets/images/youtrust.png',
                   width: 100,
                   height: 100,
                 ),

@@ -1,9 +1,9 @@
 import 'package:assets_transformation_presentation/core/extensions/context_ext.dart';
 import 'package:assets_transformation_presentation/core/style/colors.dart';
-import 'package:assets_transformation_presentation/generated/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_svg/svg.dart';
 
 class TitleSlide extends FlutterDeckSlideWidget {
   const TitleSlide()
@@ -22,13 +22,17 @@ class TitleSlide extends FlutterDeckSlideWidget {
             Positioned(
               left: 20,
               top: 20,
-              child:
-                  Assets.images.youtrustFullLogo.svg(width: 100, height: 100),
+              child: SvgPicture.asset(
+                'assets/images/youtrust_full_logo.svg',
+                width: 100,
+                height: 100,
+              ),
             ),
             Positioned(
               top: -100,
               right: 40,
-              child: Assets.images.flutterViennaLogo.image(
+              child: Image.asset(
+                'assets/images/flutter_vienna_logo.png',
                 width: 400,
                 height: 400,
               ),
@@ -37,7 +41,9 @@ class TitleSlide extends FlutterDeckSlideWidget {
               bottom: -20,
               child: Transform.rotate(
                 angle: 0.1,
-                child: Assets.images.vienna.image(),
+                child: Image.asset(
+                  'assets/images/vienna.png',
+                ),
               ),
             ),
             Center(

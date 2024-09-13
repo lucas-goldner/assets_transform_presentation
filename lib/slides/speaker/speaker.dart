@@ -1,7 +1,6 @@
 import 'package:assets_transformation_presentation/core/extensions/context_ext.dart';
 import 'package:assets_transformation_presentation/core/widgets/fade_animation.dart';
 import 'package:assets_transformation_presentation/core/widgets/margins.dart';
-import 'package:assets_transformation_presentation/generated/assets.gen.dart';
 import 'package:assets_transformation_presentation/slides/speaker/widgets/folder_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -67,7 +66,8 @@ class _SlideFolderContent extends HookWidget {
               children: [
                 CircleAvatar(
                   radius: 112,
-                  backgroundImage: Assets.images.lucas.provider(),
+                  backgroundImage:
+                      Image.asset('assets/images/lucas.jpeg').image,
                 ),
                 horizontalMargin32,
                 Column(

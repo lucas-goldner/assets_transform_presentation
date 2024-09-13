@@ -1,6 +1,8 @@
 import 'package:assets_transformation_presentation/core/style/colors.dart';
 import 'package:assets_transformation_presentation/core/style/theme.dart';
 import 'package:assets_transformation_presentation/slides/outro/outro.dart';
+import 'package:assets_transformation_presentation/slides/showing_svg/showing_svg.dart';
+import 'package:assets_transformation_presentation/slides/showing_svg_2/showing_svg_2.dart';
 import 'package:assets_transformation_presentation/slides/speaker/speaker.dart';
 import 'package:assets_transformation_presentation/slides/title/title.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +11,10 @@ import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(const FlutterDeckExample());
+void main() => runApp(const AssetsTransformationPresentation());
 
-class FlutterDeckExample extends StatelessWidget {
-  const FlutterDeckExample({super.key});
+class AssetsTransformationPresentation extends StatelessWidget {
+  const AssetsTransformationPresentation({super.key});
 
   @override
   Widget build(BuildContext context) => FlutterDeckApp(
@@ -66,6 +68,8 @@ class FlutterDeckExample extends StatelessWidget {
         slides: const [
           SpeakerSlide(),
           TitleSlide(),
+          ShowingSVG(),
+          ShowingSVG2(),
           OutroSlide(),
         ],
       );

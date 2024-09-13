@@ -1,8 +1,8 @@
 import 'package:assets_transformation_presentation/core/extensions/context_ext.dart';
 import 'package:assets_transformation_presentation/core/widgets/margins.dart';
-import 'package:assets_transformation_presentation/generated/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_svg/svg.dart';
 
 class OutroSlide extends FlutterDeckSlideWidget {
   const OutroSlide()
@@ -23,7 +23,7 @@ class OutroSlide extends FlutterDeckSlideWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Assets.images.qr.image(height: 400, width: 400),
+                Image.asset('assets/images/qr.png', height: 400, width: 400),
                 const SizedBox(
                   width: 40,
                 ),
@@ -35,7 +35,8 @@ class OutroSlide extends FlutterDeckSlideWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 28, top: 12),
-                      child: Assets.images.youtrustFullLogo.svg(
+                      child: SvgPicture.asset(
+                        'assets/images/youtrust_full_logo.svg',
                         height: 100,
                       ),
                     ),
