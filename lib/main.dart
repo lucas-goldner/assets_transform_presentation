@@ -1,10 +1,14 @@
 import 'package:assets_transformation_presentation/core/style/colors.dart';
 import 'package:assets_transformation_presentation/core/style/theme.dart';
+import 'package:assets_transformation_presentation/slides/assets_transformation/assets_transformation.dart';
 import 'package:assets_transformation_presentation/slides/outro/outro.dart';
 import 'package:assets_transformation_presentation/slides/showing_svg/showing_svg.dart';
 import 'package:assets_transformation_presentation/slides/showing_svg_2/showing_svg_2.dart';
 import 'package:assets_transformation_presentation/slides/speaker/speaker.dart';
+import 'package:assets_transformation_presentation/slides/svg_code/svg_code.dart';
 import 'package:assets_transformation_presentation/slides/title/title.dart';
+import 'package:assets_transformation_presentation/slides/transformer_package_code/transformer_package_code.dart';
+import 'package:assets_transformation_presentation/slides/what_now/what_now.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_deck/flutter_deck.dart';
@@ -68,8 +72,12 @@ class AssetsTransformationPresentation extends StatelessWidget {
         slides: const [
           SpeakerSlide(),
           TitleSlide(),
+          AssetsTransformation(),
           ShowingSVG(),
           ShowingSVG2(),
+          SVGCode(),
+          TransformerPackageCode(),
+          WhatNow(),
           OutroSlide(),
         ],
       );

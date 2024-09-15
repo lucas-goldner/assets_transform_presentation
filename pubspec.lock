@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
+  dart_code_viewer_x:
+    dependency: "direct main"
+    description:
+      name: dart_code_viewer_x
+      sha256: eb8e1b12303b3f99d69423d85f4cbdde8dbb4c451caa4210a1e6dcb2568664e9
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   dart_style:
     dependency: "direct main"
     description:
