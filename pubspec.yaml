@@ -18,6 +18,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   graphite: ^1.1.2
+  grayscale_filter: ^0.1.0-pre.0
   intl: any
   rive: ^0.13.5
   vector_graphics: 1.1.11+1
@@ -38,6 +39,10 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/rive/
+    - path: assets/images/lucas.jpeg
+      transformers:
+        - package: grayscale_filter
+          args: ["--amount=0.3"]
     - path: assets/svg/youtrust_full_logo.svg
       transformers:
         - package: vector_graphics_compiler
@@ -45,7 +50,6 @@ flutter:
       transformers:
         - package: vector_graphics_compiler
     - path: assets/svg/hessen_2.svg
-
 
   fonts:
     - family: Graphik
