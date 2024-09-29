@@ -7,6 +7,7 @@ environment:
   sdk: ">=3.3.3 <4.0.0"
 
 dependencies:
+  binarize: ^1.5.0
   dart_code_viewer_x: ^1.0.1
   dart_style: ^2.3.2
   flutter:
@@ -20,6 +21,8 @@ dependencies:
   graphite: ^1.1.2
   grayscale_filter: ^0.1.0-pre.0
   intl: any
+  resizer:
+    path: ../../Flutter/OS/resizer/
   rive: ^0.13.5
   vector_graphics: 1.1.11+1
 
@@ -39,6 +42,9 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/rive/
+    - path: assets/images/boba.jpeg
+      transformers:
+        - package: resizer
     - path: assets/images/lucas.jpeg
       transformers:
         - package: grayscale_filter
